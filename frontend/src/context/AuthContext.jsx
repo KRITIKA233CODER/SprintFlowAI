@@ -13,30 +13,30 @@ function decodeJWT(token) {
 }
 
 export function AuthProvider({ children }) {
-  const [token, setToken] = useState(() => localStorage.getItem('darc_token'));
+  const [token, setToken] = useState(() => localStorage.getItem('sprintflow_token'));
   const [user, setUser] = useState(() => {
-    const savedToken = localStorage.getItem('darc_token');
+    const savedToken = localStorage.getItem('sprintflow_token');
     if (savedToken) {
       const decoded = decodeJWT(savedToken);
       if (decoded) return decoded;
     }
-    const saved = localStorage.getItem('darc_user');
+    const saved = localStorage.getItem('sprintflow_user');
     return saved ? JSON.parse(saved) : null;
   });
 
   const login = (newToken, userData) => {
-    localStorage.setItem('darc_token', newToken);
+    localStorage.setItem('sprintflow_token', newToken);
     // Decode the JWT to get the id
     const decoded = decodeJWT(newToken);
     const fullUser = { ...userData, ...decoded };
-    localStorage.setItem('darc_user', JSON.stringify(fullUser));
+    localStorage.setItem('sprintflow_user', JSON.stringify(fullUser));
     setToken(newToken);
     setUser(fullUser);
   };
 
   const logout = () => {
-    localStorage.removeItem('darc_token');
-    localStorage.removeItem('darc_user');
+    localStorage.removeItem('sprintflow_token');
+    localStorage.removeItem('sprintflow_user');
     setToken(null);
     setUser(null);
   };

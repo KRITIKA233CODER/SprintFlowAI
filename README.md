@@ -1,8 +1,8 @@
-# 🚀 DARC — Developer Collaboration Hub
+# 🚀 SprintFlow AI — Real-Time Developer Collaboration Platform
 
-A **real-time developer collaboration platform** that combines instant messaging, collaborative journaling, and AI-powered insights. DARC enables distributed teams to communicate seamlessly, document ideas in real-time, and receive intelligent feedback to accelerate team growth.
+SprintFlow AI is an AI-powered developer collaboration and productivity platform that enables teams to communicate, share knowledge, generate AI insights, and manage engineering workflows in real time.
 
-**Live Demo:** [darc-nine.vercel.app](https://darc-nine.vercel.app/)
+**Live Demo:** [sprintflow-nine.vercel.app](https://sprintflow-nine.vercel.app/)
 
 ---
 
@@ -25,7 +25,7 @@ A **real-time developer collaboration platform** that combines instant messaging
 
 ## 🎯 Overview
 
-DARC is a **monorepo** featuring a **React 19 + Vite frontend** and a **Node.js + Express 5 backend**. It leverages:
+SprintFlow AI is a **monorepo** featuring a **React 19 + Vite frontend** and a **Node.js + Express 5 backend**. It leverages:
 
 - **Real-time Communication**: Socket.IO for instant messaging and presence tracking
 - **Vector Search**: Pinecone for semantic search and intelligent context retrieval
@@ -162,7 +162,7 @@ This is a **collaborative workspace** where teams can:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     DARC System Architecture                │
+│                 SprintFlow AI System Architecture           │
 └─────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────┐          ┌────────────────────────────┐
@@ -266,7 +266,7 @@ Redis Keys:
 ## 📁 Project Structure
 
 ```
-Darc/
+SprintFlowAI/
 ├── backend/                          # Node.js + Express
 │   ├── index.js                      # Server entry point
 │   ├── package.json                  # Backend dependencies
@@ -366,7 +366,7 @@ Before you begin, ensure you have:
 - **Node.js** v18+ ([Download](https://nodejs.org/))
 - **npm** or **yarn** package manager
 - **MongoDB** instance:
-  - Local: `mongodb://localhost:27017/darc`
+  - Local: `mongodb://localhost:27017/sprintflow`
   - Cloud: MongoDB Atlas cluster
 - **Redis** (for caching and presence):
   - Local: `redis://localhost:6379`
@@ -380,8 +380,8 @@ Before you begin, ensure you have:
 ### **Step 1: Clone the Repository**
 
 ```bash
-git clone https://github.com/bhargavmane1802/Darc.git
-cd Darc
+git clone https://github.com/KRITIKA233CODER/SprintFlowAI.git
+cd SprintFlowAI
 ```
 
 ### **Step 2: Backend Setup**
@@ -398,8 +398,8 @@ npm install
 PORT=8080
 
 # Database
-Mongo_Url=mongodb://localhost:27017/darc
-# Or MongoDB Atlas: mongodb+srv://username:password@cluster.mongodb.net/darc
+Mongo_Url=mongodb://localhost:27017/sprintflow
+# Or MongoDB Atlas: mongodb+srv://username:password@cluster.mongodb.net/sprintflow
 
 # Authentication
 JWT_SECRET=your_super_secret_jwt_key_min_32_chars_recommended
@@ -422,7 +422,7 @@ Llm_Api_Key=your_google_generative_ai_api_key
 
 # Pinecone (Vector Database)
 PINECONE_API_KEY=your_pinecone_api_key
-PINECONE_INDEX_NAME=darc-index
+PINECONE_INDEX_NAME=sprintflow-index
 PINECONE_ENVIRONMENT=production
 
 # Email Service (Nodemailer - Example: Gmail)
@@ -927,18 +927,18 @@ brew install mongodb-community
 brew services start mongodb-community
 
 # Or use Docker
-docker run -d -p 27017:27017 --name darc-mongo mongo:latest
+docker run -d -p 27017:27017 --name sprintflow-mongo mongo:latest
 ```
 
 **Cloud (MongoDB Atlas):**
 1. Create cluster at [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
-2. Get connection string: `mongodb+srv://user:pass@cluster.mongodb.net/darc`
+2. Get connection string: `mongodb+srv://user:pass@cluster.mongodb.net/sprintflow`
 3. Update `Mongo_Url` in `.env`
 
 ### **Pinecone Setup**
 
 1. Create account at [pinecone.io](https://www.pinecone.io/)
-2. Create index named `darc-index` with dimension `768` (matches Gemini embeddings)
+2. Create index named `sprintflow-index` with dimension `768` (matches Gemini embeddings)
 3. Get API key from dashboard
 4. Update `.env` with `PINECONE_API_KEY` and `PINECONE_INDEX_NAME`
 
@@ -1047,4 +1047,4 @@ This project is open source. Check the LICENSE file for details.
 
 ---
 
-**Made with ❤️ by [bhargavmane1802](https://github.com/bhargavmane1802)**
+**Made with ❤️ by [KRITIKA233CODER](https://github.com/KRITIKA233CODER)**

@@ -57,7 +57,7 @@ export default function Auth() {
             {isLogin ? 'Welcome back' : 'Create account'}
           </h1>
           <p className="auth-card__subtitle">
-            {isLogin ? 'Sign in to continue to DARC' : 'Join the developer collaboration hub'}
+            {isLogin ? 'Sign in to continue to SprintFlow AI' : 'Join the developer collaboration hub'}
           </p>
         </div>
 

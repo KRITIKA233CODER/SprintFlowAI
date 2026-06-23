@@ -1,7 +1,7 @@
 const BASE = import.meta.env.VITE_API_URL ||'/api';
 
 async function request(path, options = {}) {
-  const token = localStorage.getItem('darc_token');
+  const token = localStorage.getItem('sprintflow_token');
   const headers = { 'Content-Type': 'application/json', ...options.headers };
   if (token) headers['Authorization'] = `Bearer ${token}`;
 
@@ -68,7 +68,7 @@ export const apiToggleReaction = (roomId, journalId, emoji) =>
 
 // Image Upload — POST /auth/upload (multipart/form-data, no Content-Type header)
 export async function apiUploadImage(file) {
-  const token = localStorage.getItem('darc_token');
+  const token = localStorage.getItem('sprintflow_token');
   const formData = new FormData();
   formData.append('image', file);
 
@@ -86,7 +86,7 @@ export async function apiUploadImage(file) {
 // AI Feedback (SSE) — path: /:roomId/aiResponce/:journalId
 // Returns remaining AI credits via onRemainingCredits callback
 export function streamAIFeedback(roomId, journalId, onToken, onDone, onError, onRemainingCredits) {
-  const token = localStorage.getItem('darc_token');
+  const token = localStorage.getItem('sprintflow_token');
   const url = `${BASE}/auth/journal/${roomId}/aiResponse/${journalId}`;
 
   // 1. Create a controller to handle timeouts

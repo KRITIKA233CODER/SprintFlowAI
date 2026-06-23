@@ -31,7 +31,7 @@ export default function Sidebar({
       <div className="sidebar__header">
         <div className="sidebar__brand">
           <span className="sidebar__logo">◈</span>
-          {!collapsed && <span className="sidebar__brand-name">DARC</span>}
+          {!collapsed && <span className="sidebar__brand-name">SprintFlow AI</span>}
         </div>
         <button className="icon-btn" onClick={() => setCollapsed(!collapsed)} title="Toggle sidebar">
           {collapsed ? '▸' : '◂'}

@@ -25,16 +25,16 @@ export default function AppShell() {
   const [inviteCopied, setInviteCopied] = useState(false);
 
   // Dark / Light mode — persisted in localStorage
-  const [isDark, setIsDark] = useState(() => localStorage.getItem('darc-theme') === 'dark');
+  const [isDark, setIsDark] = useState(() => localStorage.getItem('sprintflow-theme') === 'dark');
 
   useEffect(() => {
     const root = document.documentElement;
     if (isDark) {
       root.setAttribute('data-theme', 'dark');
-      localStorage.setItem('darc-theme', 'dark');
+      localStorage.setItem('sprintflow-theme', 'dark');
     } else {
       root.removeAttribute('data-theme');
-      localStorage.setItem('darc-theme', 'light');
+      localStorage.setItem('sprintflow-theme', 'light');
     }
   }, [isDark]);
 
@@ -266,7 +266,7 @@ export default function AppShell() {
         ) : (
           <div className="app-shell__empty">
             <div className="app-shell__empty-icon">◈</div>
-            <h2>Welcome to DARC</h2>
+            <h2>Welcome to SprintFlow AI</h2>
             <p>Select a room or create one to get started.</p>
             <div className="app-shell__empty-actions">
               <button className="btn btn--primary" onClick={() => setShowModal('create')}>

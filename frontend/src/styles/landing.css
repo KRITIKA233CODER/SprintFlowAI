@@ -1,5 +1,5 @@
 /* ============================================
-   DARC — Landing Page (Space Theme)
+   SprintFlow AI — Landing Page (Space Theme)
    ============================================ */
 
 /* ---- Space Design Tokens ---- */
@@ -18,7 +18,7 @@
   --nebula-indigo:   #4f46e5;
   --nebula-blue:     #3b82f6;
   --nebula-pink:     #ec4899;
-  --cosmic-accent:   #60a5fa;   /* sky blue - darc primary */
+  --cosmic-accent:   #60a5fa;   /* sky blue - sprintflow primary */
   --cosmic-purple:   #a78bfa;
 
   /* Text */

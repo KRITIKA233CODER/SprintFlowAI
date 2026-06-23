@@ -22,6 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-DARCrecords.txt
+SprintFlowAIrecords.txt
 laterchanges
 socket-connect.yml

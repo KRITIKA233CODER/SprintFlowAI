@@ -16,7 +16,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
   params: {
-    folder: "darc_app_uploads", // Cloudinary folder name
+    folder: "sprintflow_app_uploads", // Cloudinary folder name
     allowed_formats: ["jpg", "jpeg", "png", "webp"], // strict type validation
     // Optional: transform image before saving (e.g., compress or resize)
     // transformation: [{ width: 1000, crop: "limit" }]

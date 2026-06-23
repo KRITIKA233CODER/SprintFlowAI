@@ -9,7 +9,7 @@ const SHOWCASE = [
     title: 'Stay in sync, light-years apart',
     desc: 'Instant messaging with live typing indicators, read receipts, and presence tracking so your distributed team never misses a beat.',
     image: '/showcase-chat.jpg',
-    alt: 'DARC real-time chat panel showing live conversations',
+    alt: 'SprintFlow AI real-time chat panel showing live conversations',
     reverse: false,
   },
   {
@@ -17,7 +17,7 @@ const SHOWCASE = [
     title: 'Document decisions as you go',
     desc: 'Capture ideas, blockers, and decisions in per-room shared journals with code blocks and live sync — your team\'s single source of truth.',
     image: '/showcase-journal.jpg',
-    alt: 'DARC collaborative developer journal with code snippets',
+    alt: 'SprintFlow AI collaborative developer journal with code snippets',
     reverse: true,
   },
   {
@@ -25,7 +25,7 @@ const SHOWCASE = [
     title: 'Mentor-level feedback, always on',
     desc: 'Stream AI-powered insights on your journal entries that read like advice from a senior developer — helping your whole team grow faster.',
     image: '/showcase-ai.jpg',
-    alt: 'DARC AI feedback card with streamed insights',
+    alt: 'SprintFlow AI AI feedback card with streamed insights',
     reverse: false,
   },
 ];
@@ -83,9 +83,9 @@ export default function Landing() {
       {/* ── HEADER ── */}
       <header className="landing-header" role="banner">
         {/* Logo */}
-        <a href="/" className="landing-header__logo" aria-label="DARC home">
+        <a href="/" className="landing-header__logo" aria-label="SprintFlow AI home">
           <div className="landing-header__logo-icon" aria-hidden="true">◈</div>
-          DARC
+          SprintFlow AI
         </a>
 
         {/* Nav */}
@@ -250,7 +250,7 @@ export default function Landing() {
               Ready to launch your team into orbit?
             </h2>
             <p className="landing-cta__subtitle">
-              Join distributed teams using DARC to communicate, document, and
+              Join distributed teams using SprintFlow AI to communicate, document, and
               decide — together.
             </p>
             <button
@@ -271,7 +271,7 @@ export default function Landing() {
           <div className="landing-footer__brand">
             <div className="landing-footer__logo">
               <div className="landing-footer__logo-icon" aria-hidden="true">◈</div>
-              DARC
+              SprintFlow AI
             </div>
             <p className="landing-footer__tagline">
               Real-time chat, collaborative journaling, and AI-powered insights
@@ -314,7 +314,7 @@ export default function Landing() {
 
         {/* Bottom bar */}
         <div className="landing-footer__bottom">
-          © 2026 DARC. All rights reserved.
+          © 2026 SprintFlow AI. All rights reserved.
         </div>
       </footer>
     </div>
