@@ -1,0 +1,196 @@
+/* ============================================
+   DARC — Auth Page (Light Theme)
+   ============================================ */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-base);
+}
+
+.auth-page__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+}
+.auth-page__orb--1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(124,107,255,0.12), transparent 70%);
+  top: -150px; left: -100px;
+}
+.auth-page__orb--2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(162,155,254,0.10), transparent 70%);
+  bottom: -100px; right: -80px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 36px;
+  animation: slideUp 0.5s var(--ease);
+  position: relative;
+  z-index: 5;
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.auth-card__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-card__logo {
+  font-size: 36px;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 12px var(--accent-glow));
+}
+
+.auth-card__title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+.auth-card__subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.auth-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.auth-card__toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--duration) var(--ease);
+}
+.auth-card__toggle:hover {
+  color: var(--accent-light);
+}
+
+/* ============================================
+   DARC — Auth Page Responsive Media Queries
+   ============================================ */
+
+/* ---- Tablet  (≤768px) ---- */
+@media (max-width: 768px) {
+  .auth-page {
+    padding: 20px 16px;
+    align-items: center;
+  }
+
+  .auth-card {
+    padding: 32px 28px;
+  }
+
+  .auth-card__title {
+    font-size: 24px;
+  }
+
+  .auth-card__logo {
+    font-size: 30px;
+  }
+}
+
+/* ---- Phone  (≤480px) ---- */
+@media (max-width: 480px) {
+  .auth-page {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 48px;
+  }
+
+  /* Orbs shrink so they don't distract on small screens */
+  .auth-page__orb--1 {
+    width: 280px;
+    height: 280px;
+    top: -80px;
+    left: -60px;
+  }
+  .auth-page__orb--2 {
+    width: 220px;
+    height: 220px;
+    bottom: -60px;
+    right: -40px;
+  }
+
+  .auth-card {
+    padding: 28px 20px 32px;
+    border-radius: var(--radius-lg);
+    /* On very small phones, let it fill the screen width */
+    max-width: 100%;
+  }
+
+  .auth-card__header {
+    margin-bottom: 24px;
+  }
+
+  .auth-card__logo {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .auth-card__title {
+    font-size: 22px;
+    letter-spacing: -0.3px;
+  }
+
+  .auth-card__subtitle {
+    font-size: 13px;
+  }
+
+  .auth-card__form {
+    gap: 16px;
+  }
+
+  .auth-card__footer {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+}
+
+/* ---- Tiny Phone  (≤360px) ---- */
+@media (max-width: 360px) {
+  .auth-card {
+    padding: 24px 16px 28px;
+  }
+
+  .auth-card__title {
+    font-size: 20px;
+  }
+
+  .auth-card__form {
+    gap: 14px;
+  }
+}
